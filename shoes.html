@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Landing</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Only ONE font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .animate-float {
+            animation: float 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-[#070D1A]">
+
+    <!-- Navbar -->
+    <nav class="bg-[#030712] sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 text-white">
+
+            <ul class="flex gap-6 font-semibold text-sm">
+                <li class="cursor-pointer hover:text-orange-500">Shop</li>
+                <li class="cursor-pointer hover:text-orange-500">Categories</li>
+                <li class="cursor-pointer hover:text-orange-500">New Arrivals</li>
+                <li class="cursor-pointer hover:text-orange-500">Sale</li>
+                <li class="cursor-pointer hover:text-orange-500">About</li>
+            </ul>
+
+            <div class="flex gap-5 text-xl">
+                <i class="fa-solid fa-magnifying-glass hover:text-orange-400 cursor-pointer"></i>
+                <i class="fa-solid fa-heart hover:text-orange-400 cursor-pointer"></i>
+                <i class="fa-solid fa-bag-shopping hover:text-orange-400 cursor-pointer"></i>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-16 h-[600px]">
+
+        <!-- Left Content -->
+        <div class="text-white space-y-4 mb-40 ">
+            <div class="flex items-center gap-2 bg-orange-400/10 px-3 py-1 rounded-lg w-fit">
+                <i class="fa-solid fa-bolt text-orange-400"></i>
+                <p class="text-orange-400 text-sm">New Collection 2032</p>
+            </div>
+
+            <h1 class=" md:text-6xl font-bold">
+                Step Into <br>
+                <span class="text-[#FA832B]">Your Best</span>
+            </h1>
+
+            <h1 class="text-lg">Premium footwear for every step of your journey. From <br>athletic performance to
+                everyday comfort.</h1>
+
+            <div class="flex gap-2">
+                <button
+                    class=" bg-orange-400 p-4 w-40 hover hover:bg-orange-500 text-white  shadow-lg shadow-orange-900 rounded-full ">Shop
+                    Now <i class="fa-solid fa-arrow-right ml-2 "></i></button>
+                <button class="border-2 rounded-full border-gray-300  hover:bg-gray-400/20 w-50 ">Browse
+                    Categories</button>
+            </div>
+
+            <div class="pt-4">
+                <hr class="border-1 border-gray-300/10 w-140 ">
+                <div class="mt-8 flex gap-10 w-120">
+                    <div class="space-y-2 border-r-1 border-r-gray-300/10 w-35">
+                        <h1 class="text-3xl font-bold">50k+</h1>
+                        <h1 class="text-gray-200/90 text-sm">Happy Customers </h1>
+                    </div>
+
+                    <div class="space-y-2 border-r-1 border-r-gray-300/10 w-35">
+                        <h1 class="text-3xl font-bold">4.9 <span class="text-[#FDC700] text-[20px] "><i
+                                    class="fa-solid fa-star fa-2xs"></i></span></h1>
+                        <h1 class="text-gray-200/90 text-sm">Average Rating </h1>
+                    </div>
+
+                    <div class="space-y-2 border-r-1 border-r-gray-300/10 w-35">
+                        <h1 class="text-3xl font-bold">300+</h1>
+                        <h1 class="text-gray-200/90 text-sm">Style Avilable </h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-gray-400 text-center mt-[500px] space-y-3 hover:text-white">
+            <h1 class="uppercase text-sm">explore</h1>
+            <a class="" href=""><i class="fa-solid fa-arrow-down animate-bounce text-lg "></i></a>
+        </div>
+
+        <!-- Right Image -->
+        <div class="relative mt-10 md:mt-0">
+            <img class="h-[350px] md:h-[400px] rounded-lg shadow-lg shadow-orange-900 animate-float"
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop">
+
+            <!-- Free Shipping -->
+            <div
+                class="absolute top-5 left-[-40px] bg-gray-200/20 backdrop-blur-md text-white p-3 rounded-lg flex gap-3">
+                <i
+                    class="fa-solid fa-check text-green-400 mt-2 bg-green-400/10 h-7 text-center pt-1 w-7 rounded-full"></i>
+                <div>
+                    <p class="text-sm">Free Shipping</p>
+                    <p class="text-xs text-gray-300">Orders over $75</p>
+                </div>
+            </div>
+
+            <!-- Discount -->
+            <div
+                class="absolute top-0 right-[-30px] bg-orange-400 text-white w-[100px] h-[100px] rounded-full flex items-center justify-center text-center">
+                <p class="text-sm">UP TO <br><span class="text-xl font-bold">40%</span><br> OFF</p>
+            </div>
+
+            <!-- Returns -->
+            <div
+                class="absolute bottom-5 right-[-40px] bg-gray-200/20 backdrop-blur-md text-white p-3 rounded-lg flex gap-3">
+                <i
+                    class="fa-solid fa-arrows-rotate text-orange-400mt-2 mt-2 bg-orange-400/10 h-7 text-center pt-1 w-7 rounded-full"></i>
+                <div>
+                    <p class="text-sm">Easy Returns</p>
+                    <p class="text-xs text-gray-300">60-day guarantee</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- shop by -->
+
+    <div class="bg-[#030712] min-h-[800px] pb-20">
+        <div class="flex justify-between items-end pt-20 px-20 mb-12">
+            <div class="space-y-2">
+                <h1 class="text-4xl font-bold text-white">Shop by Category</h1>
+                <p class="text-gray-400 text-sm">Find the perfect pair for every occasion</p>
+            </div>
+
+            <div class="hover:text-white text-orange-500 cursor-pointer transition-colors">
+                <h1 class="font-semibold">View All <span class="ml-2">></span></h1>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-20">
+
+            <div class="relative group overflow-hidden rounded-4xl h-60">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=400&fit=crop"
+                    alt="Running Shoes">
+
+                <div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end space-y-1 capitalize">
+                    <button class="rounded-xl text-white bg-gray-300/20 w-20 text-[13px] p-1">48 Product</button>
+                    <h1 class="text-white text-xl font-bold">Running</h1>
+                    <p class="text-gray-200 text-sm mb-2">Performance Shoes Built for Speed</p>
+                    <button class="text-white flex items-center hover:underline w-fit">
+                        Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-4xl h-60">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=400&fit=crop"
+                    alt="Running Shoes">
+
+                <div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end space-y-1 capitalize">
+                    <button class="rounded-xl text-white bg-gray-300/20 w-20 text-[13px] p-1">86 Product</button>
+                    <h1 class="text-white text-xl font-bold">Sneakers</h1>
+                    <p class="text-gray-200 text-sm mb-2">classic and contemporary street wear style </p>
+                    <button class="text-white flex items-center hover:underline w-fit">
+                        Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-4xl h-60">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?w=600&h=400&fit=crop"
+                    alt="Running Shoes">
+
+                <div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end space-y-1 capitalize">
+                    <button class="rounded-xl text-white bg-gray-300/20 w-20 text-[13px] p-1">32 Product</button>
+                    <h1 class="text-white text-xl font-bold">Basketball</h1>
+                    <p class="text-gray-200 text-sm mb-2">Court Ready shoes with superior ankle support</p>
+                    <button class="text-white flex items-center hover:underline w-fit">
+                        Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-4xl h-60">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&h=400&fit=crop"
+                    alt="Running Shoes">
+
+                <div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end space-y-1 capitalize">
+                    <button class="rounded-xl text-white bg-gray-300/20 w-20 text-[13px] p-1">64 Product</button>
+                    <h1 class="text-white text-xl font-bold">Casual</h1>
+                    <p class="text-gray-200 text-sm mb-2">Everyday Comfort Meets Effortless Style</p>
+                    <button class="text-white flex items-center hover:underline w-fit">
+                        Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-4xl h-60">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=600&h=400&fit=crop"
+                    alt="Running Shoes">
+
+                <div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end space-y-1 capitalize">
+                    <button class="rounded-xl text-white bg-gray-300/20 w-20 text-[13px] p-1">28 Product</button>
+                    <h1 class="text-white text-xl font-bold">Boots</h1>
+                    <p class="text-gray-200 text-sm mb-2">Rugged Style for Any Terrain</p>
+                    <button class="text-white flex items-center hover:underline w-fit">
+                        Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-4xl h-60">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=400&fit=crop"
+                    alt="Running Shoes">
+
+                <div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end space-y-1 capitalize">
+                    <button class="rounded-xl text-white bg-gray-300/20 w-24 text-[13px] p-1">24 Product</button>
+                    <h1 class="text-white text-xl font-bold">Sandals</h1>
+                    <p class="text-gray-200 text-sm mb-2">Breathable and Comfort For Warm Days</p>
+                    <button class="text-white flex items-center hover:underline w-fit">
+                        Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Featured Collection -->
+    <div class="bg-[#101828] w-full h-full">
+        <div class="flex justify-between items-end pt-20 px-20 mb-12">
+            <div class="space-y-2">
+                <h1 class="text-4xl font-bold text-white">Featured Collection</h1>
+                <p class="text-gray-400 text-sm">Our most popular styles handpicked for you</p>
+            </div>
+
+            <div class="hover:text-white text-orange-500 cursor-pointer transition-colors">
+                <h1 class="font-semibold">View All Featured <span class="ml-2">></span></h1>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-20">
+
+            <!-- 1 image -->
+            <div>
+                <div class="relative group overflow-hidden rounded-4xl h-60">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=400&fit=crop"
+                        alt="Running Shoes">
+                    <div class="absolute inset-0  mb-40 gap-2 ml-4 flex flex-col justify-end space-y-1 capitalize">
+                        <button class="rounded-xl text-white bg-orange-400 w-20 text-[13px] p-1 w-24">-18%</button>
+                        <button
+                            class="rounded-xl text-white bg-orange-400 w-20 text-[13px] p-1 w-24">BestSeller</button>
+                    </div>
+                    <div class="absolute inset-0 flex items-end justify-between p-4 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+
+                        <!-- Add to Cart Button -->
+                        <button
+                            class="bg-black text-white text-sm  w-35 px-4 py-2 rounded-xl hover:bg-white hover:text-black">
+                            Add to Cart
+                        </button>
+
+                        <!-- Like Button -->
+                        <button
+                            class="bg-black p-2 rounded-full shadow hover:bg-gray-200 hover:text-black text-white w-10">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="flex place-content-between ml-2 mr-3">
+
+                    <div class="space-y-1">
+                        <h1 class="text-gray-300">Running</h1>
+                        <h1 class="text-white text-[20px] hover:text-orange-400">Velocity Runner Pro</h1>
+                        <h1 class="text-white">$179 <span class="text-gray-300 text-[12px] line-through">$219</span>
+                        </h1>
+                        <div class="flex gap-3 ">
+                            <div class="bg-[#FF4136] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#000000] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#0074D9] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                        </div>
+                        <h1 class="text-gray-300 text-[11px]">12 size available</h1>
+                    </div>
+
+                    <div class="flex  gap-2">
+                        <i class="fa-solid fa-star text-yellow-500 mt-1"></i>
+                        <h1 class="text-gray-300 text-[17px] ">4.9</h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 2image -->
+            <div>
+                <div class="relative group overflow-hidden rounded-4xl h-60">
+                    <img class="w-full h-full object-content transition-transform duration-500 group-hover:scale-110 "
+                        src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=1000&fit=crop"
+                        alt="Running Shoes">
+                    <div class="absolute inset-0  mb-50 gap-2 ml-4 flex flex-col justify-end space-y-1 capitalize">
+                        <button
+                            class="rounded-xl text-white bg-orange-400 w-20 text-[13px] p-1 w-24">BestSeller</button>
+                    </div>
+                    <div class="absolute inset-0 flex items-end justify-between p-4 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+
+                        <!-- Add to Cart Button -->
+                        <button
+                            class="bg-black text-white text-sm  w-35 px-4 py-2 rounded-xl hover:bg-white hover:text-black">
+                            Add to Cart
+                        </button>
+
+                        <!-- Like Button -->
+                        <button
+                            class="bg-black p-2 rounded-full shadow hover:bg-gray-200 hover:text-black text-white w-10">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="flex place-content-between ml-2 mr-3">
+
+                    <div class="space-y-1">
+                        <h1 class="text-gray-300">Sneakers</h1>
+                        <h1 class="text-white text-[20px] hover:text-orange-400">Streetwise Classic</h1>
+                        <h1 class="text-white">$129</h1>
+                        <div class="flex gap-3 ">
+                            <div class="bg-[#FFFFFF] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#000000] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#1E3A5F] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#8B4513] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+
+                        </div>
+                        <h1 class="text-gray-300 text-[11px]">12 size available</h1>
+                    </div>
+
+                    <div class="flex  gap-2">
+                        <i class="fa-solid fa-star text-yellow-500 mt-1"></i>
+                        <h1 class="text-gray-300 text-[17px] ">4.8</h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 3image -->
+            <div>
+                <div class="relative group overflow-hidden rounded-4xl h-60">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?w=800&h=1000&fit=crop"
+                        alt="Running Shoes">
+                    <div class="absolute inset-0  mb-50 gap-2 ml-4 flex flex-col justify-end space-y-1 capitalize">
+                        <button class="rounded-xl text-white bg-green-600 w-20 text-[13px] p-1  w-9">New</button>
+                    </div>
+                    <div class="absolute inset-0 flex items-end justify-between p-4 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+
+                        <!-- Add to Cart Button -->
+                        <button
+                            class="bg-black text-white text-sm  w-35 px-4 py-2 rounded-xl hover:bg-white hover:text-black">
+                            Add to Cart
+                        </button>
+
+                        <!-- Like Button -->
+                        <button
+                            class="bg-black p-2 rounded-full shadow hover:bg-gray-200 hover:text-black text-white w-10">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="flex place-content-between ml-2 mr-3">
+
+                    <div class="space-y-1">
+                        <h1 class="text-gray-300">Basketball</h1>
+                        <h1 class="text-white text-[20px] hover:text-orange-400">Court Dominator X</h1>
+                        <h1 class="text-white">$179 <span class="text-gray-300 text-[12px] line-through">$219</span>
+                        </h1>
+                        <div class="flex gap-3 ">
+                            <div class="bg-[#FF4136] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#000000] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#4169E1] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                        </div>
+                        <h1 class="text-gray-300 text-[11px]">11 size available</h1>
+                    </div>
+
+                    <div class="flex  gap-2">
+                        <i class="fa-solid fa-star text-yellow-500 mt-1"></i>
+                        <h1 class="text-gray-300 text-[17px] ">4.7</h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 4image -->
+            <div class>
+                <div class="relative group overflow-hidden rounded-4xl h-60">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=800&h=1000&fit=crop"
+                        alt="Running Shoes">
+                    <div class="absolute inset-0  mb-50 gap-2 ml-4 flex flex-col justify-end space-y-1 capitalize">
+                        <button class="rounded-xl text-white bg-orange-400 w-20 text-[13px] p-1 w-15">-17%</button>
+                    </div>
+                    <div class="absolute inset-0 flex items-end justify-between p-4 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+
+                        <!-- Add to Cart Button -->
+                        <button
+                            class="bg-black text-white text-sm  w-35 px-4 py-2 rounded-xl hover:bg-white hover:text-black">
+                            Add to Cart
+                        </button>
+
+                        <!-- Like Button -->
+                        <button
+                            class="bg-black p-2 rounded-full shadow hover:bg-gray-200 hover:text-black text-white w-10">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="flex place-content-between ml-2 mr-3">
+
+                    <div class="space-y-1">
+                        <h1 class="text-gray-300">Boots</h1>
+                        <h1 class="text-white text-[20px] hover:text-orange-400">Trail Blazer GTX</h1>
+                        <h1 class="text-white">$189 <span class="text-gray-300 text-[12px] line-through">$229</span>
+                        </h1>
+                        <div class="flex gap-3 ">
+                            <div class="bg-[#8B4513] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#36454F] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#D2B48C] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                        </div>
+                        <h1 class="text-gray-300 text-[11px]">12 size available</h1>
+                    </div>
+
+                    <div class="flex  gap-2">
+                        <i class="fa-solid fa-star text-yellow-500 mt-1"></i>
+                        <h1 class="text-gray-300 text-[17px] ">4.8</h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 5image -->
+            <div>
+                <div class="relative group overflow-hidden rounded-4xl h-60">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=1000&fit=crop"
+                        alt="Running Shoes">
+                    <div class="absolute inset-0  mb-50 gap-2 ml-4 flex flex-col justify-end space-y-1 capitalize">
+                        <button class="rounded-xl text-white bg-green-500 w-20 text-[13px] p-1 w-20">New</button>
+                    </div>
+                    <div class="absolute inset-0 flex items-end justify-between p-4 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+
+                        <!-- Add to Cart Button -->
+                        <button
+                            class="bg-black text-white text-sm  w-35 px-4 py-2 rounded-xl hover:bg-white hover:text-black">
+                            Add to Cart
+                        </button>
+
+                        <!-- Like Button -->
+                        <button
+                            class="bg-black p-2 rounded-full shadow hover:bg-gray-200 hover:text-black text-white w-10">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="flex place-content-between ml-2 mr-3">
+
+                    <div class="space-y-1">
+                        <h1 class="text-gray-300">Running</h1>
+                        <h1 class="text-white text-[20px] hover:text-orange-400">Marathon Elite</h1>
+                        <h1 class="text-white">$249 </h1>
+                        <div class="flex gap-3 ">
+                            <div class="bg-[#CCFF00] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#000000] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-white rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                        </div>
+                        <h1 class="text-gray-300 text-[11px]">11 size available</h1>
+                    </div>
+
+                    <div class="flex  gap-2">
+                        <i class="fa-solid fa-star text-yellow-500 mt-1"></i>
+                        <h1 class="text-gray-300 text-[17px] ">4.9</h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 6image -->
+            <div>
+                <div class="relative group overflow-hidden rounded-4xl h-60">
+                    <img class="w-full h-full object-content transition-transform duration-500 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1562183241-b937e95585b6?w=800&h=1000&fit=crop"
+                        alt="Running Shoes">
+                    <div class="absolute inset-0  mb-50 gap-2 ml-4 flex flex-col justify-end space-y-1 capitalize">
+                        <button class="rounded-xl text-white bg-green-500 w-20 text-[13px] p-1 w-20">New</button>
+                    </div>
+                    <div class="absolute inset-0 flex items-end justify-between p-4 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+
+                        <!-- Add to Cart Button -->
+                        <button
+                            class="bg-black text-white text-sm  w-35 px-4 py-2 rounded-xl hover:bg-white hover:text-black">
+                            Add to Cart
+                        </button>
+
+                        <!-- Like Button -->
+                        <button
+                            class="bg-black p-2 rounded-full shadow hover:bg-gray-200 hover:text-black text-white w-10">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="flex place-content-between ml-2 mr-3">
+
+                    <div class="space-y-1">
+                        <h1 class="text-gray-300">Sandals</h1>
+                        <h1 class="text-white text-[20px] hover:text-orange-400">Cloud 9 Recovery</h1>
+                        <h1 class="text-white">$59 </h1>
+                        <div class="flex gap-3 ">
+                            <div class="bg-black rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#101828] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#FF6B6B] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                        </div>
+                        <h1 class="text-gray-300 text-[11px]">11 size available</h1>
+                    </div>
+
+                    <div class="flex  gap-2">
+                        <i class="fa-solid fa-star text-yellow-500 mt-1"></i>
+                        <h1 class="text-gray-300 text-[17px] ">4.9</h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 7image -->
+            <div>
+                <div class="relative group overflow-hidden rounded-3xl h-60 w-60">
+
+                    <!-- Image -->
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1584735175315-9d5df23860e6?w=800&h=1000&fit=crop"
+                        alt="Running Shoes">
+
+                    <!-- New Tag -->
+                    <div class="absolute top-3 left-3">
+                        <button class="rounded-xl text-white bg-green-500 text-xs px-3 py-1">
+                            New
+                        </button>
+                    </div>
+
+                    <!-- Hover Overlay -->
+                    <div class="absolute inset-0 flex items-end justify-between p-4 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+
+                        <!-- Add to Cart Button -->
+                        <button
+                            class="bg-black text-white text-sm  w-35 px-4 py-2 rounded-xl hover:bg-white hover:text-black">
+                            Add to Cart
+                        </button>
+
+                        <!-- Like Button -->
+                        <button
+                            class="bg-black p-2 rounded-full shadow hover:bg-gray-200 hover:text-black text-white w-10">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="flex place-content-between ml-2 mr-3">
+
+                    <div class="space-y-1">
+                        <h1 class="text-gray-300">Sneakers</h1>
+                        <h1 class="text-white text-[20px] hover:text-orange-400">Court Legacy Low</h1>
+                        <h1 class="text-white">$99 </h1>
+                        <div class="flex gap-3 ">
+                            <div class="bg-[#FFFFFF] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#FFFFFF] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#FFFFFF] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                            <div class="bg-[#000000] rounded-full w-4 h-4 border-gray-300 border-1"></div>
+                        </div>
+                        <h1 class="text-gray-300 text-[11px]">11 size available</h1>
+                    </div>
+
+                    <div class="flex  gap-2">
+                        <i class="fa-solid fa-star text-yellow-500 mt-1"></i>
+                        <h1 class="text-gray-300 text-[17px] ">4.5</h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div>
+            <hr class="w-full border-gray-300/20 mt-20">
+
+            <div class="h-[170px]">
+                <div class=" flex gap-8 font-bold  justify-center mt-20">
+                    <div class="flex gap-6 w-60 ">
+                        <div class="bg-[#301F21] h-10 w-24 rounded-2xl text-center pt-2"><i
+                                class="fa-solid fa-truck text-[#FB923C]"></i></div>
+                        <div class="space-y-4">
+                            <h1 class="text-lg text-white ">Free Shipping</h1>
+                            <h1 class="text-[12px] text-gray-300 ">Free standard shipping on all orders over $75.
+                                Express options available.</h1>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="flex gap-6 w-60 ">
+                        <div class="bg-[#301F21] h-10 w-24 rounded-2xl text-center pt-2"><i
+                                class="fa-solid fa-arrows-rotate text-[#FB923C]"></i></div>
+                        <div class="space-y-4">
+                            <h1 class="text-lg text-white ">60-Day Returns</h1>
+                            <h1 class="text-[12px] text-gray-300 ">Changed your mind? Return unworn items within 60
+                                days, no questions asked.</h1>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="flex gap-6 w-60 ">
+                        <div class="bg-[#301F21] h-10 w-24 rounded-2xl text-center pt-2"><i
+                                class="fa-solid fa-scale-balanced text-[#FB923C]"></i></div>
+                        <div class="space-y-4">
+                            <h1 class="text-lg text-white ">Size Guarantee</h1>
+                            <h1 class="text-[12px] text-gray-300 ">Not the right fit? Exchange for a different size at
+                                no extra cost.</h1>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="flex gap-6 w-60 ">
+                        <div class="bg-[#301F21] h-10 w-24 rounded-2xl text-center pt-2"><i
+                                class="fa-solid fa-shield-halved text-[#FB923C]"></i></div>
+                        <div class="space-y-4">
+                            <h1 class="text-lg text-white ">Secure Checkout</h1>
+                            <h1 class="text-[12px] text-gray-300 ">Your payment information is encrypted and secure.
+                                Shop with confidence.</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <hr class="w-full border-gray-300/20">
+        </div>
+
+    </div>
+
+    <!-- customer love -->
+    <div class="h-[600px] ">
+        <div class="mt-20">
+            <div class= "space-y-3 capitalize text-center">
+            <h1 class="text-[#FB923C] bg-[#301F21] rounded-full w-40 ml-[600px] p-1">customer love</h1>
+            <h1 class="font-bold text-white text-4xl">What Our Customers Say</h1>
+            <p class="text-gray-300 text-[15px] ">Join thousands of happy customers who have made Stride their go-to footwear brand</p>
+             </div>
+
+             <div class="flex  gap-6 p-4 justify-center mt-10">
+                <!-- 1 -->
+                <div class="h-[300px] bg-[#101828] w-[360px] rounded-4xl space-y-9 p-7">
+                    <div class="flex text-yellow-400 gap-2 text-sm ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>    
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="text-gray-300  w-74 text-lg ">"Stride has completely transformed my running experience. The Velocity Runner Pro helped me PR at my last marathon by 8 minutes."</p>
+                
+                    <div class="flex gap-3">
+                        <img  class="rounded-full h-15 w-15"src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="">
+                        <div>
+                            <h1 class="text-white text-lg font-bold">Marcus Chen</h1>
+                            <h1 class="text-gray-300  text-[12px]">Marathon Runner</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                    <div class="h-[300px] bg-[#101828] w-[360px] rounded-4xl space-y-9 p-7">
+                    <div class="flex text-yellow-400 gap-2 text-sm ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>    
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="text-gray-300  w-74 text-lg ">"I wear Stride shoes for all my classes. They are versatile, stylish, and most importantly, my feet never hurt after a long day of training."</p>
+                
+                    <div class="flex gap-3">
+                        <img  class="rounded-full h-15 w-15"src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="">
+                        <div>
+                            <h1 class="text-white text-lg font-bold">Emily Rodriguez</h1>
+                            <h1 class="text-gray-300  text-[12px]">Fitness Instructor</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                    <div class="h-[300px] bg-[#101828] w-[360px] rounded-4xl space-y-9 p-7">
+                    <div class="flex text-yellow-400 gap-2 text-sm ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>    
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="text-gray-300  w-74 text-lg ">"The quality and attention to detail is unmatched. I have been collecting sneakers for 15 years and Stride has become my go-to brand."</p>
+                
+                    <div class="flex gap-3">
+                        <img  class="rounded-full h-15 w-15"src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" alt="">
+                        <div>
+                            <h1 class="text-white text-lg font-bold">David Kim</h1>
+                            <h1 class="text-gray-300  text-[12px]">Sneaker Enthusiast</h1>
+                        </div>
+                    </div>
+                </div>
+                 
+
+             </div>
+        </div>
+
+    </div>
+
+    <!-- download section -->
+     <div class="bg-[#EA580C] h-[500px]">
+        <div class="text-center pt-20 space-y-10">
+            <div class="space-y-5">
+                <p class="text-5xl text-white font-bold">Ready to Step Up Your Game?</p>
+                <p class="text-gray-200 text-lg">Join the Stride community and get 15% off your first order. Plus, early access <br>
+                     to new releases and exclusive member-only deals.</p>
+            </div>
+            <div class="space-y-2">
+                <input type="text" placeholder="Enter Your Email" class=" border-1 border-gray-300 rounded-full text-gray-200 p-3 w-70" id="">
+                <button class="text-[#EA580C] p-3 rounded-full bg-white text-lg font-bold">Get 15% Off</button>
+                <p class="text-gray-300 text-sm">No spam, ever. Unsubscribe anytime.</p>
+            </div>
+            <div >
+                <p class="text-gray-300">Download Our App</p>
+                <div class="flex gap-4  justify-center mt-1">
+                    <div class="flex  gap-4 bg-orange-800/30 p-1 w-40 rounded-xl justify-center items-center">
+                    <i class="fa-brands fa-apple text-gray-300 text-[45px]"></i>
+                    <div class="mt-1">
+                        <p class="text-gray-300 text-[10px]">Download On The</p>
+                        <p class="text-gray-300 text-lg">App Store</p>
+                    </div>
+                </div>
+                <div class="flex  gap-4 bg-orange-800/30 p-1 w-40 rounded-xl justify-center items-center">
+                    <i class="fa-brands fa-google-play text-gray-300 text-[40px]"></i>
+                    <div class="mt-1">
+                        <p class="text-gray-300 text-[10px]">Download On The</p>
+                        <p class="text-gray-300 text-lg">App Store</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+
+    <!-- footer -->
+     <div class="bg-[#101828] h-[550px] w-full">
+
+        <!-- footer top section  -->
+        <div class="justify-between  flex p-3 pt-10 ml-10 mr-10 ">
+            <div class="space-y-1">
+                <h1 class="text-white font-bold text-xl">Join the Stride Club</h1>
+                <p class="text-gray-300 text-sm">Get 15% off your first order, plus early access to new drops.</p>
+            </div>
+            <div class="flex gap-4">
+                <input class="border-2 rounded-xl p-2 w-70 text-white  border-gray-300/30 " placeholder="Enter Your Email" type="text" name="" id="">
+                <button class=" bg-orange-400 text-white w-30 rounded-full p-2 hover:bg-orange-500 shadow-orange-400/30 shadow-xl "> Subscribe</button>
+            </div>
+        </div>
+          <hr class=" border-1 mt-10 border-gray-300/20 ">
+
+        <!-- footer middle section  -->
+         <div class="flex gap-50 justify-center itme-center  mt-10">
+
+            <div class="w-70  space-y-3">
+                <h1 class="text-white text-2xl font-bold">Stride </h1>
+                <p class="text-gray-300 text-sm">Premium footwear for every step of your journey. From athletic performance to everyday comfort.</p>
+                <div class=" flex  gap-5 text-xl text-gray-300 ">
+                    <i class="fa-brands fa-instagram hover:text-orange-400"></i>
+                    <i class="fa-brands fa-facebook hover:text-orange-400"></i>
+                    <i class="fa-brands fa-twitter hover:text-orange-400"></i>
+                    <i class="fa-brands fa-youtube hover:text-orange-400"></i>
+                </div>
+            </div>
+
+            <ol>
+                <ul class="space-y-3">
+                    <li class="text-white  text-xl font-bold">Shop</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Running</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Sneakers</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Basketball</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Casual</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Boots</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Sandals</li>
+                </ul>
+            </ol>
+
+            <ol>
+                <ul class="space-y-3">
+                    <li class="text-white  text-xl font-bold">Help</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">FAQ</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Shipping & Returns</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Size Guide</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Contact Us</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Track Order</li>
+                </ul>
+            </ol>
+
+             <ol>
+                <ul class="space-y-3">
+                    <li class="text-white  text-xl font-bold">About</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Our Story</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Sustainability</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Athletes</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Careers</li>
+                    <li class="text-gray-300 text-sm hover:text-orange-400">Store Locator</li>
+                </ul>
+            </ol>
+         </div>
+         <hr class="border-1 border-gray-300/10 mt-20">
+
+         <!-- footer last section -->
+            <div class="flex justify-between m-4">
+                <div>
+                    <p class="text-gray-300">© 2026 Stride. All rights reserved.</p>
+                </div>
+
+                <div class="flex gap-5">
+                    <p class="text-gray-300 hover:text-white">Privacy</p>
+                    <p class="text-gray-300 hover:text-white">Terms</p>
+                    <img  class="h-7 w-15" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkhLq6cRgDQxwETWJ2PuzfP_XgjuvjZzm_rA&s" alt="">
+                    <img  class="h-7 w-12" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLqnwtzOs0P-aJLTIJboqZ2sAAz9btsmPcZw&s" alt="">
+                    <img  class="h-7 w-12" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/AMAX_Logo.jpg" alt="">
+                </div>
+            </div>
+      
+
+
+     </div>
+</body>
+
+</html>
